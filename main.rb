@@ -14,13 +14,18 @@ def disp
 	glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0)
 
 	glMatrixMode(GL_MODELVIEW)
-	glBegin(GL_TRIANGLES)
+	glBegin(GL_QUADS)
 		glColor3f(1,0,0)
-		glVertex(0,0.8,0)
+		glVertex(-0.6,0.8,0)
+
 		glColor3f(0,1,0)
-		glVertex(-0.6,-0.2,0)
-		glColor3f(0,1,1)
+		glVertex(0.6,0.8,0)
+
+		glColor3f(1,0,1)
 		glVertex(0.6,-0.2,0)
+
+		glColor3f(0,1,1)
+		glVertex(-0.6,-0.2,0)
 	glEnd
 	glFlush
 	glutPostRedisplay
