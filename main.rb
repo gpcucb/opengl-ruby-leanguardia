@@ -58,7 +58,7 @@ def disp
 		glTranslatef(0,-(ARM_HEIGHT+ARM_WIDTH)/2,0);
 		glColor3f(1,0.6,0.6);
 		glScalef(ARM_WIDTH,ARM_WIDTH,ARM_LENGTH);
-		glutSolidCube(1);
+		glutWireCube(1);
 	glPopMatrix();
 	
 	#brazo derecho
