@@ -20,7 +20,7 @@ def disp
 	gluPerspective(60.0,1.0,1.0,100.0)
 
 	glMatrixMode(GL_MODELVIEW)
-	glTranslatef(0.0,0.0,-5.0)
+	glTranslatef(0.0,0.0,-7.0)
 
 	glEnable(GL_LIGHTING)
 	glEnable(GL_LIGHT0)
@@ -29,9 +29,9 @@ def disp
 	glEnable(GL_NORMALIZE)
 	glShadeModel(GL_SMOOTH)
 
-	position=[50, 30, 100]
+	position=[50, 30, 50]
 	ambient=[1, 1, 1, 1]
-	color=[0.2, 0.2, 0.1, 1.0]
+	color=[0.9, 0.9, 0.9, 1.0]
 
 	glLightfv(GL_LIGHT0, GL_POSITION, position)
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, color)
@@ -39,27 +39,40 @@ def disp
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambient)
 
 	glPushMatrix()
-		glTranslate(0,1,0)
+		glTranslate(0,2,0)
+		glMaterial(GL_FRONT, GL_DIFFUSE, ambient);
+		glMaterial(GL_FRONT, GL_SPECULAR, ambient);
+		glMaterialf(GL_FRONT, GL_SHININESS, 100);
 		glColor3f(0.9,0.3,0.0)
-		glutSolidSphere(1.3,20,9)
+		glutSolidSphere(1.3,20,20)
 	glPopMatrix()
 
 	glPushMatrix()
-		glTranslate(3,1,0)
+		glTranslate(3,2,0)
+		glMaterial(GL_FRONT, GL_DIFFUSE, ambient);
+		glMaterial(GL_FRONT, GL_SPECULAR, ambient);
+		glMaterialf(GL_FRONT, GL_SHININESS, 100);
+
 		glColor3f(0.2,0.3,0.4)
-		glutSolidSphere(1.3,20,9)
+		glutSolidSphere(1.3,20,20)
 	glPopMatrix()
 
 	glPushMatrix()
 		glTranslate(0,-1,0)
+		glMaterial(GL_FRONT, GL_DIFFUSE, ambient);
+		glMaterial(GL_FRONT, GL_SPECULAR, ambient);
+		glMaterialf(GL_FRONT, GL_SHININESS, 100);
 		glColor3f(0.7,0.8,0.4)
-		glutSolidSphere(1.3,20,9)
+		glutSolidSphere(1.3,20,20)
 	glPopMatrix()
 
 	glPushMatrix()
 		glTranslate(3,-1,0)
+		glMaterial(GL_FRONT, GL_DIFFUSE, ambient);
+		glMaterial(GL_FRONT, GL_SPECULAR, ambient);
+		glMaterialf(GL_FRONT, GL_SHININESS, 100);
 		glColor3f(0.8,0.2,0.4)
-		glutSolidSphere(1.3,20,9)
+		glutSolidSphere(1.3,20,20)
 	glPopMatrix()
 
 	glFlush
